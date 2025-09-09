@@ -99,6 +99,7 @@ def test_eq(a: float) -> None:
 
 EPS = 1e-5
 
+
 @pytest.mark.task0_2
 @given(small_floats, small_floats)
 def test_sigmoid(a: float, b: float) -> None:
@@ -120,6 +121,7 @@ def test_sigmoid(a: float, b: float) -> None:
     if a < b:
         assert sigmoid(a) <= sigmoid(b)
 
+
 @pytest.mark.task0_2
 @given(small_floats, small_floats, small_floats)
 def test_transitive(a: float, b: float, c: float) -> None:
@@ -132,6 +134,7 @@ def test_transitive(a: float, b: float, c: float) -> None:
 
     if lt(a, b) and lt(b, c):
         assert lt(a, c)
+
 
 @pytest.mark.task0_2
 @given(small_floats, small_floats)

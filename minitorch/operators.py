@@ -73,6 +73,7 @@ def relu(x: float) -> float:
     """
     return max(0, x)
 
+
 EPS = 1e-6
 
 
@@ -171,7 +172,7 @@ def reduce(
          $x_1 \ldots x_n$ and computes the reduction :math:`fn(x_3, fn(x_2,
          fn(x_1, x_0)))`
     """
-    
+
     def apply(ls: Iterable[float]) -> float:
         result = start
         for x in ls:
